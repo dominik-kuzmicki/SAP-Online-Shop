@@ -1,0 +1,8 @@
+specVersion: "2.1"
+metadata:
+  name: sap.ui.demo
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: webapp

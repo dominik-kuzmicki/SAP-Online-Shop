@@ -1,0 +1,117 @@
+{
+  "categories": [
+      {
+          "ID": "1",
+          "name": "Accesories",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-accessories-150x150px.png",
+          "subcategories": [
+              {
+                  "ID": "1.1",
+                  "name": "Video Surveillance Products",
+                  "image": "https://assets.winncom.eu/2023/10/winncom-products-video-surveillance-150x150px.png"
+              },
+              {
+                  "ID": "1.2",
+                  "name": "Coaxial Cables",
+                  "image": "https://assets.winncom.eu/2023/10/winncom-products-accessories-coaxial-cables-150x150px.png"
+              },
+              {
+                  "ID": "1.3",
+                  "name": "Connectors Barrel Adapters  ",
+                  "image": "https://assets.winncom.eu/2023/10/winncom-products-accessories-connectors-barrel-adapters-150x150px.png"
+              },
+              {
+                  "ID": "1.4",
+                  "name": "Couplers",
+                  "image": "https://assets.winncom.eu/2023/10/winncom-products-accessories-couplers-150x150px.png"
+              },
+              {
+                  "ID": "1.5",
+                  "name": "Environmental Enclosures  ",
+                  "image": "https://assets.winncom.eu/2023/10/winncom-products-accessories-environmental-enclosures-150x150px.png"
+              }
+          ]
+      },
+      {
+          "ID": "2",
+          "name": "Antennas",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-antennas-150x150px.png",
+          "subcategories": []
+      },
+      {
+          "ID": "3",
+          "name": "Cables and Cable Assemblies",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-cables-150x150px.png",
+          "subcategories": [
+              {
+                  "ID": "3.1",
+                  "name": "Active Fiber Components"
+              },
+              {
+                  "ID": "3.2",
+                  "name": "Passive Fiber Components"
+              }
+          ]
+      },
+      {
+          "ID": "4",
+          "name": "Installation and Diagnostic Tools",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-installation-diagnostic-tools-150x150px.png",
+          "subcategories": []
+      },
+      {
+          "ID": "5",
+          "name": "Licensed Wireless Point to Multipoint Systems",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-licensed-point-to-point-systems-150x150px.png",
+          "subcategories": []
+      },
+      {
+          "ID": "6",
+          "name": "Licensed Wireless Point to Point Systems",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-licensed-wireless-point-to-multipiont-systems-150x150px.png",
+          "subcategories": [
+              {
+                  "ID": "6.1",
+                  "name": "IoT and Monitoring Devices"
+              },
+              {
+                  "ID": "6.2",
+                  "name": "Customized Networking Hardware"
+              }
+          ]
+      },
+      {
+          "ID": "7",
+          "name": "Network and Network Management Systems",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-network-management-systems-150x150px.png",
+          "subcategories": [
+              {
+                  "ID": "6.1",
+                  "name": "IoT and Monitoring Devices"
+              },
+              {
+                  "ID": "6.2",
+                  "name": "Customized Networking Hardware"
+              }
+          ]
+      },
+      {
+          "ID": "8",
+          "name": "Network Monitoring",
+          "image": "https://assets.winncom.eu/2023/11/winncom-manufacturers-paessler-product-families-150x150px-1.png",
+          "subcategories": []
+      },
+      {
+          "ID": "9",
+          "name": "Site Solutions",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-site-solutions-150x150px.png",
+          "subcategories": []
+      },
+      {
+          "ID": "10",
+          "name": "Unlicensed Wireless Point to Point Systems",
+          "image": "https://assets.winncom.eu/2023/10/winncom-products-unlicensed-wireless-point-to-point-systems-150x150px.png",
+          "subcategories": []
+      }
+  ]
+}

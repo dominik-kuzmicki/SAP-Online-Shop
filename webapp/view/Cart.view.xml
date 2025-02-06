@@ -1,0 +1,142 @@
+<mvc:View
+    controllerName="sap.ui.demo.controller.Cart"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:m="sap.m">
+    <!-- Shopping cart --> 
+    <m:VBox class="mainPage" visible="{= !${cart>/isEmpty} }">  
+        <m:VBox visible="{= ${uiStateModel>/isDeliveryVisible} ? false : true }">
+            <Title text="Cart" class="cartTitle" />
+            <m:HBox class="flexBox">
+
+            <m:FlexBox
+                id="cart"
+                width="100%"
+                wrap="Wrap"
+                alignItems="Start"
+                justifyContent="SpaceBetween"
+                items="{cart>/items}"
+                class="cartProductContainer">
+                 <m:HBox class="cartCard">
+                    <m:CheckBox class="cartCheckbox" selected="true" />
+                    <m:Image src="{cart>image}" class="cartImage" press="onItemPress"/>
+                    <m:HBox class="cartBox" width="100%">
+                        <m:VBox class="cartDetail">
+                        <m:Text text="{cart>name}" class="cartName" />
+                        <m:HBox>
+                            <m:Button text="" icon="sap-icon://heart" class="cartButton" press="onAddToCart"/>
+                            <m:Button text="" icon="sap-icon://delete" class="cartButton" press="onRemoveItem"/>
+                        </m:HBox>
+                        </m:VBox>
+
+                        <m:Text text="{cart>price} USD." class="cartPrice" />
+
+                        <m:HBox class="cartButtonQuantityBox">
+                            <m:Button text="" icon="sap-icon://less" class="cartButtonQuantity" press="onDecreaseQuantity"/>
+                            <m:Text text="{cart>quantity}" class="cartQuantity" />
+                            <m:Button text="" icon="sap-icon://add" class="cartButtonQuantity" press="onIncreaseQuantity"/>
+                        </m:HBox>
+                    </m:HBox>   
+                </m:HBox>    
+            </m:FlexBox>
+    
+            <m:VBox class="cartContainer" height="370px">
+                <m:VBox class="cartBox1">
+                    <m:Button text="Proceed to checkout" icon="sap-icon://approvals" class="orderButton" press="onCheckoutPress"/>
+                    <m:Text text="Available delivery methods and times can be selected when placing an order." class="cartText" />
+                </m:VBox>
+            
+                <m:FlexBox
+                    alignItems="Center"
+                    justifyContent="SpaceBetween"> 
+                    <m:Text text="Your Cart" class="cartBoxTitle" />
+                    <m:Text text="{cart>/totalQuantity} items" class="cartBoxItems" />
+                </m:FlexBox> 
+
+                <m:FlexBox
+                    alignItems="Center"
+                    justifyContent="SpaceBetween"> 
+                    <m:Text text="Products ({cart>/totalQuantity})" class="cartBoxText" />
+                    <m:Text text="{cart>/totalPrice} USD." class="cartBoxPrice" />
+                </m:FlexBox> 
+            
+                <m:FlexBox
+                    alignItems="Center"
+                    justifyContent="SpaceBetween"> 
+                    <m:Text text="Discount" class="cartBoxText" />
+                    <m:Text text="-{cart>/discount} USD." class="cartBoxDiscount" />
+                </m:FlexBox> 
+
+                <m:FlexBox
+                    alignItems="Center"
+                    justifyContent="SpaceBetween"
+                    class="cartTotalBox"> 
+                    <m:Text text="Total cost" class="cartBoxTotalText" />
+                    <m:Text text="{cart>/finalPrice} USD." class="cartBoxTotalText" />
+                </m:FlexBox> 
+            </m:VBox>
+            </m:HBox> 
+        </m:VBox>
+
+        <!-- Delivery block -->
+        <m:VBox class="delivery" visible="{= ${authModel>/isAuthorized} ? true : false }" > 
+            <m:VBox visible="{= ${uiStateModel>/isCheckoutClicked} ? true : false }"> 
+            <Title text="Delivery" class="cartTitle" />
+
+            <m:FlexBox
+                alignItems="Start"
+                justifyContent="SpaceBetween">     
+                <m:VBox>  
+                    <VBox>
+                        <Label text="Name" />
+                        <Input id="name" placeholder="Enter your name" width="500px" />
+                    </VBox>
+                    <VBox class="sapUiTinyMarginTop">
+                        <Label text="Phone" />
+                        <Input id="phone" type="Tel" placeholder="Enter your phone number" width="500px"/>
+                    </VBox>
+                    <HBox class="sapUiTinyMarginTop">
+                        <VBox>
+                            <Label text="Street" />
+                            <Input id="street" placeholder="Street" width="320px" />
+                        </VBox>
+                        <VBox class="sapUiSmallMarginBegin">
+                            <Label text="House" />
+                            <Input id="house" placeholder="House" width="163px" />
+                        </VBox>
+                    </HBox>
+                    <HBox class="sapUiTinyMarginTop">
+                        <VBox>
+                            <Label text="Entrance" />
+                            <Input id="entrance" placeholder="Entrance" width="151px" />
+                        </VBox>
+                        <VBox class="sapUiSmallMarginBegin">
+                            <Label text="Floor" />
+                            <Input id="floor" placeholder="Floor" width="151px" />
+                        </VBox>
+                        <VBox class="sapUiSmallMarginBegin">
+                            <Label text="Apartment" />
+                            <Input id="apartment" placeholder="Apartment" width="163px" />
+                        </VBox>
+                    </HBox>
+                    <VBox class="sapUiTinyMarginTop">
+                        <Label text="Comment" />
+                        <TextArea id="comment" placeholder="Enter any comments" rows="3" width="500px" />
+                    </VBox>
+
+                    <Button text="To payment" icon="sap-icon://currency" press="onToPaymentPress" class="orderButton sapUiTinyMarginTop"/>
+                </m:VBox>
+
+                <Image  src="https://cdn-icons-png.flaticon.com/512/9896/9896693.png" class="delivery_img" />
+            </m:FlexBox> 
+            </m:VBox>
+        </m:VBox>
+    </m:VBox>
+
+    <!-- Empty shopping cart -->
+    <m:VBox class="mainPage" visible="{cart>/isEmpty}" alignItems="Center" justifyContent="Center">
+        <Title text="Cart is empty" class="cartTitle" />
+        <Image src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" class="sapUiLargeMarginTop" height="270px"/>
+        <m:Text text="Your cart is empty. You can select products in the catalog" class="sapUiTinyMarginTop" />
+    </m:VBox>
+</mvc:View>

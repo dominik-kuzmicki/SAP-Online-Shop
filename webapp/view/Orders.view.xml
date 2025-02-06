@@ -1,0 +1,55 @@
+<mvc:View 	
+    controllerName="sap.ui.demo.controller.Orders"
+    xmlns:tnt="sap.tnt" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    xmlns:m="sap.m" 
+    xmlns:core="sap.ui.core">
+    <m:VBox class="mainPage">
+        <m:FlexBox
+            width="100%"
+            wrap="Wrap"
+            alignItems="Start"
+            justifyContent="SpaceBetween"
+            >
+            <m:VBox class="ordersMenu">
+   	            <tnt:NavigationList
+	            	id="navigationList"
+	            	width="320px"
+	            	selectedKey="subItem3">
+	            	<tnt:NavigationListItem text="Сart" key="cart" icon="sap-icon://cart" />
+                    <tnt:NavigationListItem text="Orders" key="orders" icon="sap-icon://sales-order"/>
+                    <tnt:NavigationListItem text="Featured Products" key="featured" icon="sap-icon://unfavorite"/>
+                    <tnt:NavigationListItem text="Profile settings" key="profile" icon="sap-icon://user-settings"/>
+                    <tnt:NavigationListItem text="Reviews and questions" key="reviews" icon="sap-icon://question-mark"/>
+                    <tnt:NavigationListItem text="Logout" key="logout" icon="sap-icon://employee"/>
+	            </tnt:NavigationList>
+            </m:VBox>
+
+            <m:VBox class="orders">     
+                <m:Title text="My orders" class="cartTitle" />
+                <m:HBox items="{/orders}" class="productsBlock cartProductContainer cartCard">
+                    <m:FlexBox
+                        id="orders"
+                        width="100%"
+                        wrap="Wrap"
+                        alignItems="Start"
+                        justifyContent="SpaceBetween"
+                        >
+			    	    <m:VBox class="">
+			    		    <m:Text text="Order {orderNumber}" class="productsPrice" />
+			    		    <m:Text text="Status {status}" class="productsName" />
+			    	    </m:VBox>
+                        <m:VBox class="">
+                            <m:HBox>
+                    	        <m:Text text="324 USD" class="cartPrice" />
+			    		        <m:Text text="{totalQuantity} items" class="cartBoxItems" />
+                            </m:HBox>
+                        <m:Button text="Rate your order" icon="sap-icon://cart" class="productsButton" press="onAddToCart"/>
+                  	    </m:VBox>
+                    </m:FlexBox>
+                </m:HBox>
+	        </m:VBox>
+        </m:FlexBox>
+    </m:VBox>
+</mvc:View>

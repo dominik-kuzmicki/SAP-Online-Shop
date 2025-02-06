@@ -1,0 +1,82 @@
+{
+  "products": [
+      {
+          "ID": "1",
+          "category": "Camera",
+          "subcategory": "1.1",
+          "sku": "AXIS P13 Box Camera Series",
+          "name": "AXIS P13 Box Camera Series",
+          "description": "With electronic image stabilization, AXIS P13 Series ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. And thanks to barrel distortion correction, they deliver great image quality, even at the edges of the image. Plus, corridor format ensures the video is perfectly adapted to monitored corridors or tunnels. Additionally, Lightfinder 2.0, and Forensic WDR deliver true colors and great detail in challenging light or near darkness. ",
+          "image": "https://www.axis.com/sites/axis/files/2023-03/t92e05_w_tq1003_e_angle_left_2301-Productimage.png",
+          "price": 430,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      },
+      {
+          "ID": "5",
+          "category": "Camera",
+          "subcategory": "1.1",
+          "sku": "AXIS XFQ1656 Explosion-Protected Camera",
+          "name": "AXIS XFQ1656 Explosion-Protected Camera",
+          "description": "With electronic image stabilization, AXIS P13 Series ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. And thanks to barrel distortion correction, they deliver great image quality, even at the edges of the image. Plus, corridor format ensures the video is perfectly adapted to monitored corridors or tunnels. Additionally, Lightfinder 2.0, and Forensic WDR deliver true colors and great detail in challenging light or near darkness. ",
+          "image": "https://www.axis.com/sites/axis/files/styles/standard_1360_x_auto/public/2023-05/xfq1656_angle_left_2304-Productimage.png.webp?itok=PEb_orbR",
+          "price": 1430,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      },
+      {
+          "ID": "2",
+          "category": "Cables",
+          "subcategory": "1.1",
+          "sku": "AXIS P1388-BE Box Camera",
+          "name": "AXIS P1388-BE Box Camera",
+          "description": "This IP66-, IP67-, IK10- and NEMA 4X-rated camera can handle temperatures from -40 °C to 60 °C (-40 °F to 140 °F). A front heater ensures the lens is free of ice and fog. Plus, with barrel distortion correction and defogging functionality, it delivers clear, sharp images. AXIS P13 Weathershield Extension A is also available for extreme protection against snow or rain, and to prevent reflections. With electronic image stabilization, this robust camera ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. Furthermore, with PoE and redundant DC power, you get flexible installation, and your data is safeguarded in the event of a power outage.",
+          "image": "https://www.axis.com/sites/axis/files/styles/standard_1360_x_auto/public/2024-03/p1388be_wall_angle_left_2401-Productimageswithcropping.png.webp?itok=q0tuc_xE",
+          "price": 690,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      },
+      {
+          "ID": "3",
+          "category": "Camera",
+          "subcategory": "1.1",
+          "sku": "AXIS M30 Dome Camera Series",
+          "name": "AXIS M30 Dome Camera Series",
+          "description": "With electronic image stabilization, AXIS P13 Series ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. And thanks to barrel distortion correction, they deliver great image quality, even at the edges of the image. Plus, corridor format ensures the video is perfectly adapted to monitored corridors or tunnels. Additionally, Lightfinder 2.0, and Forensic WDR deliver true colors and great detail in challenging light or near darkness. ",
+          "image": "https://www.axis.com/sites/axis/files/styles/standard_1360_x_auto/public/2024-06/m3126_white_ceiling_angle_left_2406-Productimageswithcropping.png.webp?itok=rGqYCoF_",
+          "price": 829,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      },
+      {
+          "ID": "4",
+          "category": "Cables",
+          "subcategory": "1.1",
+          "sku": "AXIS M4317-PLR Panoramic Camera",
+          "name": "AXIS M4317-PLR Panoramic Camera",
+          "description": "This IP66-, IP67-, IK10- and NEMA 4X-rated camera can handle temperatures from -40 °C to 60 °C (-40 °F to 140 °F). A front heater ensures the lens is free of ice and fog. Plus, with barrel distortion correction and defogging functionality, it delivers clear, sharp images. AXIS P13 Weathershield Extension A is also available for extreme protection against snow or rain, and to prevent reflections. With electronic image stabilization, this robust camera ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. Furthermore, with PoE and redundant DC power, you get flexible installation, and your data is safeguarded in the event of a power outage.",
+          "image": "https://www.axis.com/sites/axis/files/styles/standard_1360_x_auto/public/2023-06/m4317plve_angle_left_2208-Productimage_0.png.webp?itok=Zp6taVBX",
+          "price": 690,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      },
+      {
+          "ID": "6",
+          "category": "Cables",
+          "subcategory": "1.1",
+          "sku": "AXIS Q8641-E PT Thermal Network Camera",
+          "name": "AXIS Q8641-E PT Thermal Network Camera",
+          "description": "This IP66-, IP67-, IK10- and NEMA 4X-rated camera can handle temperatures from -40 °C to 60 °C (-40 °F to 140 °F). A front heater ensures the lens is free of ice and fog. Plus, with barrel distortion correction and defogging functionality, it delivers clear, sharp images. AXIS P13 Weathershield Extension A is also available for extreme protection against snow or rain, and to prevent reflections. With electronic image stabilization, this robust camera ensures stable images despite vibration. Scene profiles can be automatically optimized to suit specific scenarios. Furthermore, with PoE and redundant DC power, you get flexible installation, and your data is safeguarded in the event of a power outage.",
+          "image": "https://www.axis.com/sites/axis/files/styles/standard_1360_x_auto/public/2020-01/1600_q8641e_35mm_angle_left_1704.png.webp?itok=YdnDmZiA",
+          "price": 690,
+          "discount": 10,
+          "stock": 20,
+          "rating": 4.9
+      }
+  ]
+}

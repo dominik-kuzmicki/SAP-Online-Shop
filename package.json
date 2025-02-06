@@ -1,0 +1,11 @@
+{
+  "name": "sap-online-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "ui5 serve --open index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}

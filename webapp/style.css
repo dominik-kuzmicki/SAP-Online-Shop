@@ -1,0 +1,819 @@
+* {
+    outline: 0 !important;
+}
+  
+.container {
+    background-color: white;
+    min-height: 2000px !important;
+}
+
+.slider {
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Main */
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.mainPageTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+:root {
+    --sapContent_FocusColor: transparent !important;
+}
+
+.menu {
+    height: 60px !important;
+    background-color: #052c75 !important;
+    padding: 10px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.menuContainer {
+    max-width: 1200px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    height: 100%;
+    width: 100% !important; 
+    margin: auto !important;; 
+    display: flex !important;;
+    justify-content: space-between !important;;
+    align-items: center !important;;
+}
+
+.menuLogo {
+    height: 36px !important;
+    margin-right: 28px !important;
+}
+
+
+.menuButtonCatalog > .sapMBtnInner {
+    margin-top: -3px;
+    padding: 0 !important;
+    margin-left: 12px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    border-radius: 40px !important;
+    width: 125px !important;
+    height: 40px !important;
+    display: flex!important;
+    align-items: center!important; 
+    justify-content: center!important; 
+
+    font-size: 16px!important;
+    color: #fff!important;
+    background-color: #052c75 !important;
+    border: 2px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonCatalog:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    border: 1px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonCatalog:focus > .sapMBtnInner  {
+    color: #fff !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    border: 1px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonCatalog .sapMBtnIcon {
+    color: #fff !important;
+    border: none !important;
+}
+
+.menuSearch {
+    margin: 0 !important;
+    margin-top: -3px !important;
+    width: 470px !important;
+    border: none !important;
+    border-radius: 40px !important;
+    height: 40px !important;
+}
+
+
+.menuButtonFav > .sapMBtnInner {
+    margin-top: -3px;
+    padding: 0 !important;
+
+    font-size: 14px !important;
+    line-height: 20px !important;
+    border-radius: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex!important;
+    align-items: center!important; 
+    justify-content: center!important; 
+
+    font-size: 16px!important;
+    color: #fff!important;
+    background-color: #052c75 !important;
+    border: 2px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonFav:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    border: 1px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonFav:focus > .sapMBtnInner  {
+    color: #fff !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    border: 1px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButtonFav .sapMBtnIcon {
+    color: #fff !important;
+    border: none !important;
+}
+
+
+.menuButton > .sapMBtnInner {
+    margin-top: -3px !important;
+    margin-left: 8px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    border-radius: 40px !important;
+    width: 108px !important;
+    height: 40px !important;
+    display: flex!important;
+    align-items: center!important; 
+    justify-content: center!important; 
+
+    font-size: 16px!important;
+    color: #fff!important;
+    background-color: #052c75 !important;
+    border: 2px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+
+.sapMBtnBase {
+    background: transparent !important; /* Убираем фон кнопок */
+    border: none !important; /* Убираем рамку кнопок */
+}
+
+.sapMBtnBase:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+.menuButton:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    border: 1px solid hsla(0, 0%, 100%, .2) !important;
+}
+
+.menuButton .sapUiIcon {
+    margin-right: 8px; /* Отступ между иконкой и текстом */
+    vertical-align: middle;
+}
+
+.menuButton .sapMBtnContent {
+    display: flex;
+    align-items: center; /* Выравнивание иконок и текста по центру */
+}
+
+.menuButton .sapMBtnIcon {
+    color: #fff !important;
+    border: none !important;
+}
+
+/* product */
+.productTitle {
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+}
+
+.productSubtitle {
+    font-size: 1.1rem !important;
+}
+
+.productCard {
+    position: relative;
+    height: 210px !important;
+    width: 210px !important;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  
+    align-items: center;
+    text-align: center;
+  
+    /* border: 1px solid dark;*/
+    border-radius: 3%; 
+    
+    margin-bottom: 70px;
+    transition: 0.3s ease; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.productCard:hover {
+    background-color: white !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    transform: translateY(-5px); /* Лёгкий подъём плитки для интерактивного эффекта */
+}
+
+.productCard.sapMLIBActive {
+    background-color: white !important;
+}
+
+.productImage {
+    width: 150px !important;
+    height: 150px !important;
+    overflow: hidden;
+    object-fit: cover;
+    margin: auto;
+}
+
+.productName {
+    position: absolute; 
+    top: 220px; 
+    right: 0;
+    text-align: center;
+    font-size: 16px !important; 
+    width: 100%; 
+}
+
+/* .productName:hover {
+    cursor: pointer; 
+} */
+
+.productPrice {
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.productDescription {
+    width: 10rem;
+    color: #666;
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.productButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productDescription {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* product_detail */
+
+.productPage {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.sapMBreadcrumbsLink {
+    color: #666 !important;
+    text-decoration: none;
+    font-size: 16px !important; 
+}
+
+.productHeader {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageContainer {
+    flex: 1;
+    /* max-width: 300px; */
+}
+
+.productImg {
+    max-width: 340px;
+    max-height: 340px;
+}
+
+.thumbnails {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.productInfo {
+    margin-left: 20px;
+    width: 298px;
+    flex: 2;
+    /* padding: 20px; */
+}
+
+
+.productTitle {
+    margin-top: 8px;
+    font-size: 26px;
+    line-height: 32px;
+}
+
+.productLabel {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.productRating {
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+    color: #444;
+}
+
+.productRating .starIcon {
+    color: #fbc02d; 
+    font-size: 16px; 
+}
+
+.productPriceContainer {
+    width: 322px;
+    height: 222px;
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 12px; 
+}
+
+
+.productPriceText {
+    font-size: 26px !important;
+    line-height: 32px;
+    font-weight: 700;
+    color: #1a1a1a; 
+}
+
+.productInstallment {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff5e6;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-block;
+}
+
+.buttonBlock {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.addToCartButton > .sapMBtnInner {
+    height: 48px !important; 
+    width: 216px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+    font-size: 16px;
+    color: #fff;
+    background-color: #e52e6b;
+    border: 1px solid #e52e6b;
+}
+
+.addToCartButton:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: #cc215a !important;
+    border: 1px solid #cc215a !important;
+}
+
+.addToCartButton .sapMBtnIcon {
+    color: #fff !important;
+}
+
+.addToFavoriteButton > .sapMBtnInner  {
+    height: 48px !important;
+    width: 48px !important;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+
+    border: 1px solid #e6e8eb;   
+}
+
+.addToFavoriteButton:hover > .sapMBtnInner {
+    border: 1px solid #e6e8eb !important;
+}
+
+.addToFavoriteButton .sapMBtnIcon {
+    color: #1a1a1a !important;
+    font-size: 16px;
+}
+
+
+/* PRODUCTS */
+.productsCategory {
+    margin-top: 4px !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+.productsSort {
+    margin-top: 20px !important;
+}
+
+.productsBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productsCard { 
+        width: 230px !important;
+        padding: 16px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+      
+        align-items: center;
+        text-align: start;
+      
+        /* border: 1px solid dark;
+        border-radius: 5%; 
+        margin-bottom: 70px;
+        transition: 0.3s ease; 
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.productsImage {
+    width: 198px !important;
+    height: 198px !important;
+    overflow: hidden;
+    object-fit: cover;
+    margin: auto;
+}
+
+.productsPrice {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px; 
+}
+
+.productsName {
+    font-size: 16px !important;
+    margin-bottom: 12px;
+}
+
+.productsButton > .sapMBtnInner {
+    height: 44px !important; 
+    width: 198px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+    font-size: 16px;
+    color: #fff;
+    background-color: #e52e6b;
+    border: 1px solid #e52e6b;
+}
+
+.productsButton:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: #cc215a !important;
+    border: 1px solid #cc215a !important;
+}
+
+.productsButton .sapMBtnIcon {
+    color: #fff !important;
+}
+
+.productsButtonInCart > .sapMBtnInner {
+    height: 44px !important; 
+    width: 198px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+    font-size: 16px;
+    color: #e52e6b;
+    background-color: #fff;
+    border: 1px solid #e52e6b;
+}
+
+.productsButtonInCart:hover > .sapMBtnInner {
+    color: #cc215a !important;
+    background-color: #fdeef3 !important;
+    border: 1px solid #cc215a !important;
+}
+
+.productsButtonInCart .sapMBtnIcon {
+    color: #e52e6b !important;
+}
+
+.productsFilter{
+    padding-left: 28px;
+    padding-top: 16px;
+    width: 225px !important;
+}
+
+.productsSortLabel {
+    font-size: 16px !important;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* CART */
+.cartTitle {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    padding: 7px 0 !important; 
+}
+
+.cartProductContainer {
+    border-radius: 24px; 
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+
+}
+
+.cartCard {
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+    padding-bottom: 16px !important;
+}
+
+
+.cartBox {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    margin: 0 !important;
+}
+
+.cartImage {
+    width: 108px !important;
+    height: 108px !important;
+    /* padding: 8px !important; */
+    padding-left: 12px !important;
+    padding-right: 8px !important;
+
+}
+
+.cartDetail {
+    width: 252px !important;
+    padding-left: 24px !important;
+    padding-right: 8px !important;
+}
+
+.cartName {
+    font-size: 16px !important;
+    width: 220px !important;
+
+}
+
+.cartButton {
+    height: 32px !important;
+    width: 32px !important;
+    margin-right: 8px !important;
+    margin-top: 12px !important;
+}
+
+.cartButtonQuantityBox {
+    margin-right: 12px !important;
+}
+
+.cartButtonQuantity {
+    height: 32px !important;
+    width: 32px !important;
+    margin-top: -12px !important;
+}
+
+.cartPrice {
+    /* align-items: center !important;
+    display: flex !important; */
+    /* width: 212px !important; */
+    /* padding-left: 24px !important; */
+    /* padding-top: 24px !important; */
+    /* padding-right: 8px !important; */
+    height: 52px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #10c44c !important;
+}
+
+.cartQuantity {
+    /* padding: 24px !important; */
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.cartButtonBox {
+    width: 131px !important;
+    height: 32px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cartContainer {
+    /* max-height: 370 !important; */
+    width: 400px !important;
+    padding: 24px !important;
+    border-radius: 24px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  
+    margin-left: 24px; 
+}
+
+.orderButton > .sapMBtnInner {
+    height: 56px !important; 
+    width: 352px !important;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+    font-size: 16px;
+    color: #fff;
+    background: rgba(16, 196, 76, 1);
+    border: 1px solid rgba(16, 196, 76, 1);
+}
+
+.orderButton:hover > .sapMBtnInner {
+    color: #fff !important;
+    background-color: rgb(53, 203, 103) !important;
+    border: 1px solid rgb(53, 203, 103) !important;
+}
+
+
+
+.orderButton .sapMBtnIcon {
+    color: #fff !important;
+}
+
+.cartText {
+    margin-top: 28px !important;
+    padding-bottom: 24px !important;
+    color: #707F8D !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+}
+
+.cartBox1 {
+    border-bottom: 1px solid rgba(204, 214, 228, .6);
+}
+
+.cartBoxTitle {
+    color: #070707 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.4em !important;
+    padding-bottom: 16px;
+    padding-top: 24px;
+}
+
+.cartBoxItems {
+    color: rgba(0, 26, 52, .6) !important;
+    font-size: 14px !important;
+    line-height: 1.29em !important;
+    text-align: end !important;
+    padding-bottom: 16px;
+    padding-top: 24px;
+}
+
+.cartBoxText {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.cartBoxPriceText {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.cartBoxDiscount {
+    color: #f91155 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.cartTotalBox {
+    border-top: 1px solid rgba(204, 214, 228, .6);
+    margin-top: 16px;
+    padding-top: 16px;
+}
+
+.cartBoxTotalText {
+    font-size: 20px !important;
+    line-height: 26px !important;
+    color: #070707 !important;
+    font-weight: 700 !important;
+}
+
+
+/* Delivery */
+.delivery_img {
+    width: 500px !important;
+    height: 500px;
+    margin-top: -10px;
+    padding-right: 50px;
+    /* padding: 0 50px; */
+}
+
+/* BANER REMOVE */
+.banner {
+    border-radius: 16px;
+    width: 1168px !important;
+    height: 250px !important;
+}
+
+/* products row view */
+.productsImg {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.productsPriceContainer {
+    width: 322px;
+    height: 192px;
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 12px; 
+    margin-left: 40px !important;
+}
+
+.productsInfo {
+    /* margin-left: 20px; */
+    width: 550px;
+    flex: 2;
+    /* padding: 20px; */
+}
+
+.addToFavoriteButtonProducts > .sapMBtnInner  {
+    height: 44px !important;
+    width: 44px !important;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+
+    border: 1px solid #e6e8eb;   
+}
+
+/* ORDERS */
+.ordersMenu {
+    width: 250px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.orders {
+    width: 850px;
+}

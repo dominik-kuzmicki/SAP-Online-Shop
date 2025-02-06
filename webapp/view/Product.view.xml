@@ -1,0 +1,61 @@
+<mvc:View
+    controllerName="sap.ui.demo.controller.Product"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core">
+    <m:VBox class="mainPage">    
+        <m:Breadcrumbs id="breadcrumbs" class="sapUiTinyMarginTop" currentLocationText="AXIS T92E05">
+            <m:Link text="Main" press="onBreadcrumbPress" />
+            <m:Link text="Accesories" press="onBreadcrumbPress" />
+            <m:Link text="Camera" press="onBreadcrumbPress" />
+        </m:Breadcrumbs>
+
+        <!-- Заглушка -->
+        <!-- Изображение -->
+        <m:HBox class="productHeader">
+            <m:VBox class="imageContainer">
+                <m:Image src="https://www.axis.com/sites/axis/files/2023-03/t92e05_w_tq1003_e_angle_left_2301-Productimage.png" alt="Product Image" class="productImg" />
+                <!-- Миниатюры -->
+                <m:HBox class="thumbnails">
+                    <m:Image src="https://www.axis.com/sites/axis/files/2023-03/t92e05_w_tq1003_e_angle_left_2301-Productimage.png" class="thumbnail" />
+                    <m:Image src="https://www.axis.com/sites/axis/files/2023-03/t92e05_w_tq1003_e_angle_left_2301-Productimage.png" class="thumbnail" />
+                    <m:Image src="https://www.axis.com/sites/axis/files/2023-03/t92e05_w_tq1003_e_angle_left_2301-Productimage.png" class="thumbnail" />
+                </m:HBox>
+            </m:VBox>
+
+            <!-- Информация о продукте -->
+            <m:VBox class="productInfo">
+                <m:Title text="AXIS T92E05 Protective Housing" level="H1" class="productTitle" />
+                <m:HBox class="productRating">
+                    <core:Icon src="sap-icon://favorite" class="starIcon" />
+                    <m:Text text="4.7 • 146 reviews" />
+                </m:HBox>
+				<m:Label text="Category:" class="sapUiTinyMarginEnd"/>
+				<m:Text text="Accesories" class="sapUiSmallMarginBottom"/>
+				<m:Label text="Sub-Category:" class="sapUiTinyMarginEnd"/>
+				<m:Text text="Camera" class="sapUiSmallMarginBottom"/>
+				<m:Label text="Supplier:" class="sapUiTinyMarginEnd"/>
+				<m:Link text="AXIS Protective" class="sapUiSmallMarginBottom"/>
+  	            <m:Label text="In stock:" class="sapUiTinyMarginEnd"/>
+				<m:Link text="19" class="sapUiSmallMarginBottom"/>
+				<m:Label text="Description:" class="sapUiTinyMarginEnd"/>
+				<m:Text class="productDesc" text="AXIS T92E Housing Series protects the Axis network camera in adverse indoor and outdoor conditions.
+                    AXIS T92E20 features an internal shell for storing heat in cold environments. Fan ventilation for hot environments transfers excess to the outer chassis for efficient cooling.
+                    AXIS T92E05/T92E20 feature IP66 and NEMA 4X protection rating against the ingress of dust, windblown dust, rain, high pressure water jets from any direction, hose-directed water, and damage from external ice formation. In addition, they are IK10-rated for protection against impact and vandal acts.
+                    Easy and quick installation using either Power over Ethernet or High Power over Ethernet connection. The network cable is further protected in the wall mount to enhance the vandal protection.
+                    Various brackets and accessories are available for AXIS T92E Housing Series, such as ceiling and wall brackets, column mounts and adapters. AXIS T92E Series comes with a wall bracket with an internal cable channel and ball joint."/>
+            </m:VBox>
+            
+            <!-- Цена -->
+            <m:VBox class="productPriceContainer">
+                <m:Text text="430,00 USD." class="productPriceText" />
+                <m:Text text="from 19 USD. payment in installments" class="productInstallment" />
+                <m:HBox class="buttonBlock">
+                    <m:Button text="Add to cart" icon="sap-icon://cart" class="addToCartButton" />
+                    <m:Button icon="sap-icon://heart-2" class="addToFavoriteButton"/>
+                </m:HBox>
+            </m:VBox>
+        </m:HBox>
+    </m:VBox>
+</mvc:View>

@@ -1,0 +1,21 @@
+{
+  "orders": [
+      {
+          "ID": "323.099.829",
+          "orderNumber": "323.099.829",
+          "status": "Delivered",
+          "totalPrice": 580,
+          "totalQuantity": 3,
+          "discount": 10,
+          "finalPrice": 522,
+          "userId": "414241",
+          "name": "John",
+          "phone": "+375777777777",
+          "address": "Address",
+          "comment": "Fast deliery",
+          "payment": "Card",
+          "deliveryDate": "14 Jan. 2025",
+          "deliveryTime": "18:10"
+      }
+  ]
+}

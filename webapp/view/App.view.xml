@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="sap.ui.demo.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <App>
+        <Page backgroundDesign="Standard" showHeader="false">
+            <Toolbar class="menu">
+                <HBox class="menuContainer">
+                    <HBox>
+                        <Image src="https://go.security101.com/hubfs/axis-logo-reverse-2022.svg" class="menuLogo"/>
+                        <Button icon="sap-icon://menu" text="Catalog" class="menuButtonCatalog" press="onNavToMain"/>
+                    </HBox>
+                    <SearchField class="menuSearch" search="onSearch" placeholder="Search for products"/>
+                    <HBox>
+                        <Button icon="sap-icon://heart-2" text="" class="menuButtonFav" press="onFavoritePress" />
+                        <Button icon="sap-icon://sales-order-item" text="" class="menuButtonFav sapUiTinyMarginBegin" press="onOrdersPress" />
+                        <!-- <Button icon="sap-icon://sales-order-item" text="" class="menuButtonFav sapUiTinyMarginBegin" press="onOrdersPress" visible="{= ${authModel>/isAuthorized} ? true : false }"/> -->
+                        <Button icon="sap-icon://customer" text="Login" class="menuButton" press="onLoginPress" visible="{= ${authModel>/isAuthorized} ? false : true }"/>
+                        <Button icon="sap-icon://visits" text="Logout" class="menuButton" press="onLogoutPress" visible="{= ${authModel>/isAuthorized} ? true : false }"/>
+                        <Button icon="sap-icon://cart" text="Cart" class="menuButton" press=".onNavToCart"/>
+                    </HBox>
+                </HBox>
+            </Toolbar>
+            
+            <content>
+                <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ui.demo.controller.App" class="container">
+                    <App id="app"/>
+                </mvc:View>
+            </content>
+
+            <!-- Login Dialog -->
+            <Dialog id="loginDialog" title="Login">
+                <VBox class="sapUiSmallMargin">
+                    <Label text="Username"/>
+                    <Input id="username" placeholder="Enter your username"/>
+                    <Label text="Password"/>
+                    <Input id="password" type="Password" placeholder="Enter your password"/>
+                </VBox>
+                <beginButton>
+                    <Button text="Login" press="onLoginSubmit"/>
+                </beginButton>
+                <endButton>
+                    <Button text="Cancel" press="onLoginCancel"/>
+                </endButton>
+            </Dialog>
+
+        </Page>
+    </App>
+</mvc:View>

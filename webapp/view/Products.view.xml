@@ -1,0 +1,94 @@
+<mvc:View
+    controllerName="sap.ui.demo.controller.Products"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+    <m:VBox class="mainPage">
+        <m:Breadcrumbs id="breadcrumbs1" class="sapUiTinyMarginTop" currentLocationText="Camera">
+			<m:Link text="Main" press="onBreadcrumbPress" />
+			<m:Link text="Accesories" press="onBreadcrumbPress" />
+		</m:Breadcrumbs>
+        <m:Text text="Camera" class="productsCategory" />
+		
+        <m:FlexBox
+            alignItems="Start"
+            justifyContent="SpaceBetween">    
+            <!-- View Switch -->
+            <m:SegmentedButton
+                class="productsSort"
+                selectedKey="card"
+                selectionChange=".onViewChange">
+                <m:items>
+                    <m:SegmentedButtonItem width="150px"
+                        key="card"
+                        text="Cards" />
+                    <m:SegmentedButtonItem width="150px"
+                        key="list"
+                        text="List" />
+                </m:items>
+            </m:SegmentedButton>
+            
+            <!-- Sorting -->
+            <m:ComboBox width="332px" class="productsSort" selectedKey="1" selectionChange="onSortChange">
+			    <core:Item key="1" text="Best Sellers" />
+			    <core:Item key="2" text="Price: Low to High" />
+			    <core:Item key="3" text="Price: High to Low" />
+		    </m:ComboBox>
+	    </m:FlexBox>
+
+        <!-- List view -->
+		<m:FlexBox
+            id="list"
+            visible="{view>/isListVisible}"
+            width="100%"
+            wrap="Wrap"
+            alignItems="Start"
+            direction="Column"
+            justifyContent="SpaceBetween"
+            items="{/products}">
+            <m:HBox class="productHeader sapUiSmallMarginBottom">
+                <m:VBox class="imageContainer">
+                    <m:Image src="{image}" alt="Product Image" class="productsImg" />
+                </m:VBox>
+                <m:VBox class="productsInfo">
+                      <m:Title text="{name}" level="H1" class="productTitle" />
+                        <m:HBox class="productRating">
+                            <core:Icon src="sap-icon://favorite" class="starIcon" />
+                            <m:Text text="{rating} • 146 reviews" />
+                        </m:HBox>
+					    <m:Label text="Description:" class="sapUiTinyMarginEnd"/>
+					    <m:Text class="productDesc" text="{description}"/>
+                </m:VBox>
+                <m:VBox class="productsPriceContainer">
+                    <m:Text text="{price} USD." class="productPriceText" />
+                    <m:Text text="from 19 USD. payment in installments" class="productInstallment" />
+                    <m:HBox class="buttonBlock">
+                        <m:Button text="Add to cart" icon="sap-icon://cart" class="productsButton" press="onAddToCart" visible="{= ${inCart} ? false : true }"/>
+				        <m:Button text="In cart" icon="sap-icon://cart" class="productsButtonInCart" press="onNavToCart" visible="{= ${inCart} ? true : false  }"/>
+                             <m:Button icon="sap-icon://heart-2" class="addToFavoriteButtonProducts"/>
+                    </m:HBox>
+                </m:VBox>
+            </m:HBox>
+		</m:FlexBox>
+	
+        <!-- Card view -->
+        <m:HBox class="productsBlock" id="card" visible="{view>/isCardVisible}">
+			<m:FlexBox
+                id="products"
+                width="100%"
+                wrap="Wrap"
+                alignItems="Start"
+                justifyContent="SpaceBetween"
+                items="{/products}">
+                <m:VBox class="productsCard">
+					<m:Image src="{image}" class="productsImage" press="onItemPress"/>
+					<m:Text text="{price} USD." class="productsPrice" />
+					<m:Text text="{name}" class="productsName" />
+					<m:Button text="Add to cart" icon="sap-icon://cart" class="productsButton" press="onAddToCart" visible="{= ${inCart} ? false : true }"/>
+					<m:Button text="In cart" icon="sap-icon://cart" class="productsButtonInCart" press="onNavToCart" visible="{= ${inCart} ? true : false  }"/>
+                </m:VBox>
+			</m:FlexBox>
+		</m:HBox>   
+	</m:VBox>
+</mvc:View>

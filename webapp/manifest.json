@@ -1,0 +1,93 @@
+{
+    "sap.app": {
+        "id": "sap.ui.demo",
+        "type": "application",
+        "applicationVersion": {
+          "version": "1.0.0"
+        },
+        "title": "SAP UI5 Demo App",
+        "description": "A demo application built with SAP UI5.",
+        "sourceTemplate": {
+          "id": "sap.ui.template.odata.v4",
+          "version": "1.0.0"
+        }
+    },
+    "sap.ui5": {
+      "rootView": {
+        "viewName": "sap.ui.demo.view.App",
+        "type": "XML",
+        "async": true
+      },
+      "routing": {
+        "config": {
+            "routerClass": "sap.m.routing.Router",
+            "viewType": "XML",
+            "viewPath": "sap.ui.demo.view",
+            "controlId": "app",
+            "controlAggregation": "pages",
+            "transition": "slide",
+            "async": true,
+            "mode": "history"   
+        },
+        "routes": [
+            {
+                "pattern": "",
+                "name": "Main",
+                "target": "Main"
+            },
+            {
+                "pattern": "cart",
+                "name": "Cart",
+                "target": "Cart"
+            },
+            {
+              "pattern": "Subcategories/{id}",
+              "name": "Subcategories",
+              "target": "Subcategories"
+            },
+            {
+              "pattern": "Products/{id}",
+              "name": "Products",
+              "target": "Products"
+            },
+            {
+              "pattern": "Product/{id}",
+              "name": "Product",
+              "target": "Product"
+            },
+            {
+              "pattern": "Orders",
+              "name": "Orders",
+              "target": "Orders"
+            }
+        ],
+        "targets": {
+            "Main": {
+                "viewName": "Main",
+                "viewLevel": 1
+            },
+            "Cart": {
+                "viewName": "Cart",
+                "viewLevel": 2
+            },
+            "Subcategories": {
+              "viewName": "Subcategories",
+              "viewLevel": 3
+            },
+            "Products": {
+              "viewName": "Products",
+              "viewLevel": 4
+            },
+            "Product": {
+              "viewName": "Product",
+              "viewLevel": 5
+            },
+            "Orders": {
+              "viewName": "Orders",
+              "viewLevel": 5
+            }
+        }
+      }
+    }
+  }
+  

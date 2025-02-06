@@ -1,0 +1,23 @@
+<mvc:View 
+    controllerName="sap.ui.demo.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+    <VBox class="mainPage">            
+        <Image class="banner" src="https://www.winncom.com/images/Tarana_MS_Banner.jpg" />
+        <Title text="Product categories" class="sapUiMediumMarginTop productTitle" />
+        <Text text="Explore the world of Cambium innovation and witness the transformative power of wireless connectivity for a connected future." 
+            class="sapUiSmallMarginTop sapUiMediumMarginBottom productSubtitle"/>
+        <FlexBox
+            width="100%"
+            wrap="Wrap"
+            alignItems="Start"
+            justifyContent="SpaceBetween"
+            items="{/categories}">
+			<CustomListItem class="productCard" type="Active" press="onItemPress">
+                    <Image src="{image}" class="productImage"/>
+                    <Text text="{name}" class="productName" />
+		    </CustomListItem>       
+        </FlexBox>
+    </VBox>
+</mvc:View>
