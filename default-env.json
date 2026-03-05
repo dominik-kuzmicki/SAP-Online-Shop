@@ -1,0 +1,9 @@
+{
+  "destinations": [
+    {
+      "name": "ZORDERS",
+      "url": "https://d5h.acbaltica.com/sap/bc/rest/zdemo_orders?sap-client=600&userId=182"
+
+    }
+  ]
+}

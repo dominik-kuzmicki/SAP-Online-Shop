@@ -1,0 +1,11 @@
+applications:
+  - name: b2b-app
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack  
+    command: npm start
+    services:
+    - ZORDERS
+    - northwind
+    # routes:
+    #   - route: b2b-app.cfapps.us10-001.hana.ondemand.com

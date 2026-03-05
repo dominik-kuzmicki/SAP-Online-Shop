@@ -1,0 +1,45 @@
+[debug] [2026-03-05T07:23:11.179Z] ----------------------------------------------------------------------
+[debug] [2026-03-05T07:23:11.180Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dvkuzmitskij\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-03-05T07:23:11.180Z] CLI Version:   15.8.0
+[debug] [2026-03-05T07:23:11.180Z] Platform:      win32
+[debug] [2026-03-05T07:23:11.181Z] Node Version:  v24.13.1
+[debug] [2026-03-05T07:23:11.181Z] Time:          Thu Mar 05 2026 10:23:11 GMT+0300 (Moscow Standard Time)
+[debug] [2026-03-05T07:23:11.181Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\dvkuzmitskij\Documents\Рабочий ноутбук файлы\ПРОЕКТ ONLINE SHOP SAP UI5\SAP Online Shop
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-03-05T07:23:23.274Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-05T07:23:23.274Z] > authorizing via signed-in user (dominik.kuzmicki@gmail.com)
+[debug] [2026-03-05T07:23:23.276Z] Checked if tokens are valid: true, expires at: 1772698826885
+[debug] [2026-03-05T07:23:23.276Z] Checked if tokens are valid: true, expires at: 1772698826885
+[debug] [2026-03-05T07:23:23.278Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap [none]
+[debug] [2026-03-05T07:23:24.727Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap 200
+[debug] [2026-03-05T07:23:24.727Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap {"projectId":"online-store-sap","projectNumber":"807304586007","displayName":"Online Store SAP","name":"projects/online-store-sap","resources":{"hostingSite":"online-store-sap"},"state":"ACTIVE","etag":"1_6e57ee91-bae3-4fc1-a7a3-8e140221a02a"}
+[info] i  Using project online-store-sap (Online Store SAP) . 
+[info] 
+=== Hosting Setup
+[debug] [2026-03-05T07:23:24.736Z] Checked if tokens are valid: true, expires at: 1772698826885
+[debug] [2026-03-05T07:23:24.736Z] Checked if tokens are valid: true, expires at: 1772698826885
+[debug] [2026-03-05T07:23:24.736Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap [none]
+[debug] [2026-03-05T07:23:25.235Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap 200
+[debug] [2026-03-05T07:23:25.235Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-store-sap {"projectId":"online-store-sap","projectNumber":"807304586007","displayName":"Online Store SAP","name":"projects/online-store-sap","resources":{"hostingSite":"online-store-sap"},"state":"ACTIVE","etag":"1_6e57ee91-bae3-4fc1-a7a3-8e140221a02a"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -1,3 +1,4 @@
+
 specVersion: "2.1"
 metadata:
   name: sap.ui.demo
@@ -6,3 +7,20 @@ resources:
   configuration:
     paths:
       webapp: webapp
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: true        
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /ZORDERS
+            url: https://d5h.acbaltica.com/sap/bc/rest/zdemo_orders?sap-client=600&userId=182
+            destination: ZORDERS
+            # secure: true           # для проверки HTTPS сертификатов
+            

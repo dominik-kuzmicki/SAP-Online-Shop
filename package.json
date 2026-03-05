@@ -1,11 +1,19 @@
 {
-  "name": "sap-online-shop",
+  "name": "b2b-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "ui5 serve --open index.html"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "axios": "^1.13.6",
+    "axios-cookiejar-support": "^6.0.5",
+    "btoa": "^1.2.1",
+    "express": "^4.22.1",
+    "http-proxy-middleware": "^2.0.9",
+    "tough-cookie": "^6.0.0"
+  },
+  "engines": {
+    "node": "22.x"
+  }
 }

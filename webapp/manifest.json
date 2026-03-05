@@ -10,9 +10,46 @@
         "sourceTemplate": {
           "id": "sap.ui.template.odata.v4",
           "version": "1.0.0"
+        },
+        "dataSources": {
+          "NorthwindModel": {
+              "uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+              "type": "OData",
+              "settings": {
+                  "odataVersion": "2.0"
+              }
+          }
         }
     },
+    "sap.cloud": {
+      "service": "ZORDERS"
+    },
     "sap.ui5": {
+      "models": 
+        {
+"": {
+    "type": "sap.ui.model.odata.v2.ODataModel",
+    "settings": {
+        "defaultOperationMode": "Server",
+        "defaultBindingMode": "OneWay",
+        "defaultCountMode": "Request"
+    },
+    "dataSource": "NorthwindModel",
+    "preload": true
+},
+        "categories": {
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "model/categories.json"
+        },
+        "products": {
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "model/products.json"
+        },
+        "orders": {
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "model/orders.json"
+        }
+      },
       "rootView": {
         "viewName": "sap.ui.demo.view.App",
         "type": "XML",
@@ -41,11 +78,6 @@
                 "target": "Cart"
             },
             {
-              "pattern": "Subcategories/{id}",
-              "name": "Subcategories",
-              "target": "Subcategories"
-            },
-            {
               "pattern": "Products/{id}",
               "name": "Products",
               "target": "Products"
@@ -56,9 +88,14 @@
               "target": "Product"
             },
             {
-              "pattern": "Orders",
-              "name": "Orders",
-              "target": "Orders"
+              "pattern": "Account/{tab}",
+              "name": "Account",
+              "target": "Account"
+            },
+            {
+              "pattern": "Order/{id}",
+              "name": "Order",
+              "target": "Order"
             }
         ],
         "targets": {
@@ -70,10 +107,6 @@
                 "viewName": "Cart",
                 "viewLevel": 2
             },
-            "Subcategories": {
-              "viewName": "Subcategories",
-              "viewLevel": 3
-            },
             "Products": {
               "viewName": "Products",
               "viewLevel": 4
@@ -82,8 +115,12 @@
               "viewName": "Product",
               "viewLevel": 5
             },
-            "Orders": {
-              "viewName": "Orders",
+            "Account": {
+              "viewName": "Account",
+              "viewLevel": 5
+            },
+            "Order": {
+              "viewName": "Order",
               "viewLevel": 5
             }
         }

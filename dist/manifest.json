@@ -1,0 +1,129 @@
+{
+	"sap.app": {
+		"id": "sap.ui.demo",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "SAP UI5 Demo App",
+		"description": "A demo application built with SAP UI5.",
+		"sourceTemplate": {
+			"id": "sap.ui.template.odata.v4",
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"NorthwindModel": {
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.cloud": {
+		"service": "ZORDERS"
+	},
+	"sap.ui5": {
+		"models": {
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "NorthwindModel",
+				"preload": true
+			},
+			"categories": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/categories.json"
+			},
+			"products": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/products.json"
+			},
+			"orders": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/orders.json"
+			}
+		},
+		"rootView": {
+			"viewName": "sap.ui.demo.view.App",
+			"type": "XML",
+			"async": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.demo.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"async": true,
+				"mode": "history"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "Main",
+					"target": "Main"
+				},
+				{
+					"pattern": "cart",
+					"name": "Cart",
+					"target": "Cart"
+				},
+				{
+					"pattern": "Products/{id}",
+					"name": "Products",
+					"target": "Products"
+				},
+				{
+					"pattern": "Product/{id}",
+					"name": "Product",
+					"target": "Product"
+				},
+				{
+					"pattern": "Account/{tab}",
+					"name": "Account",
+					"target": "Account"
+				},
+				{
+					"pattern": "Order/{id}",
+					"name": "Order",
+					"target": "Order"
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewName": "Main",
+					"viewLevel": 1
+				},
+				"Cart": {
+					"viewName": "Cart",
+					"viewLevel": 2
+				},
+				"Products": {
+					"viewName": "Products",
+					"viewLevel": 4
+				},
+				"Product": {
+					"viewName": "Product",
+					"viewLevel": 5
+				},
+				"Account": {
+					"viewName": "Account",
+					"viewLevel": 5
+				},
+				"Order": {
+					"viewName": "Order",
+					"viewLevel": 5
+				}
+			}
+		},
+		"flexBundle": false
+	}
+}

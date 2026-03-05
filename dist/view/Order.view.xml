@@ -1,0 +1,113 @@
+<mvc:View 	
+    controllerName="sap.ui.demo.controller.Order"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    <!-- Busy -->
+    <FlexBox
+        justifyContent="Center"
+        alignItems="Center"
+        height="100%"
+        visible="{order>/busy}">
+        <BusyIndicator size="3rem"/>
+    </FlexBox>
+
+    <VBox class="container-custom py-8" visible="{= !${order>/busy} }">
+        <!-- Header -->
+        <VBox class="mb-8">
+            <Link text="Back" icon="sap-icon://arrow-left" iconFirst="true" press=".onBack" class="flex items-center text-gray-600 hover:text-primary-600 mb-4"/>
+            <HBox justifyContent="SpaceBetween" class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <VBox>
+                    <Text text="Order #{order>/id}" class="text-3xl font-bold"/>
+                    <Text text="Placed on {order>/createdat}" class="text-gray-600 mt-1"/>
+                </VBox>
+                <HBox class="mt-4 sm:mt-0 p-0">
+                    <Button text="Repeat Order" press=".onRepeatOrder" class="btn btn-primary flex" icon="sap-icon://copy"/>
+                </HBox>
+            </HBox>
+        </VBox>
+
+        <VBox class="grid grid-cols-1 grid-cols-3 gap-8">
+            
+            <!-- Main Content -->
+            <VBox class="col-span-2 space-y-6">
+                <!-- Order Status -->
+                <VBox class="bg-white rounded-lg shadow-sm p-6">
+                    <Text text="Order Status" class="text-lg font-semibold mb-4"/>
+                    <ObjectStatus text="{order>/status}" state="{ path: 'order>/status', formatter: '.formatStatusState' }" class="text-lg font-semibold"/>
+                </VBox>
+
+                <!-- Order Items -->
+                <VBox class="bg-white rounded-lg shadow-sm p-6">
+                    <Text text="Order Items" class="text-lg font-semibold mb-6"/>
+                    <VBox items="{order>/items}" class="space-y-4">
+                        <HBox alignItems="Center" class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg">
+                                
+                                <Image src="{= ${order>images}[0] }" class="w-16 h-16 object-cover rounded-md"/>
+
+                                <VBox class="flex-1">
+                                    <Link text="{order>name}" href="{= '/index.html#/Product/' + ${order>ID}}" class="text-lg font-medium text-gray-900 hover:text-primary-600"/>
+                                    <Text text="{order>category} / SKU: {order>sku}" class="text-sm text-gray-600 mt-1"/>
+                                    <HBox alignItems="Center" class="flex items-center mt-2 space-x-4">
+                                        <Text text="Quantity: {order>quantity}" class="text-sm text-gray-600"/>
+                                        <Text text="{= 'Price: €' + ((100 - ${order>discount}) * ${order>price} / 100).toFixed(2)}" class="text-sm text-gray-600"/>
+                                    </HBox>
+                                </VBox>
+
+                                <VBox class="text-right">
+                                    <Text text="{= '€' + (((100 - ${order>discount}) * ${order>price} / 100).toFixed(2) * ${order>quantity}).toFixed(2) }" class="text-lg font-semibold"/>
+                                </VBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </VBox>
+
+            <!-- Sidebar -->
+            <VBox class="col-span-1 space-y-6">
+                <!-- Order Summary -->
+                <VBox class="bg-white rounded-lg shadow-sm p-6">
+                <Text text="Order Summary" class="text-lg font-semibold mb-4"/>
+
+                <VBox class="space-y-3">
+                    <HBox justifyContent="SpaceBetween" class="flex justify-between">
+                        <Text text="Subtotal" class="text-gray-600"/>
+                        <Text text="{path: 'order>/subtotal', formatter: '.formatCurrency'}"/>
+                    </HBox>
+
+                    <HBox visible="{= ${order>/discount} > 0 }" justifyContent="SpaceBetween" class="flex justify-between">
+                        <Text text="Discount" class="text-green-600"/>
+                        <Text text="-{path: 'order>/discount', formatter: '.formatCurrency'}" class="text-green-600"/>
+                    </HBox>
+
+                    <HBox justifyContent="SpaceBetween" class="border-t pt-3 flex justify-between font-semibold text-lg">
+                        <Text text="Total"/>
+                        <Text text="{path: 'order>/total', formatter: '.formatCurrency'}"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- Order Comment  -->
+            <VBox class="bg-white rounded-lg shadow-sm p-6">
+                <Text text="Order Comment" alignItems="Center" class="text-lg font-semibold mb-4 flex items-center"/>
+                <VBox class="text-sm">
+                    <Text text="{order>/comment}" class="h-5 mr-2"/>
+                </VBox>
+            </VBox>
+
+            <!-- Contact Support -->
+            <VBox class="bg-white rounded-lg shadow-sm p-6">
+                <Text text="Need Help?" class="text-lg font-semibold mb-4"/>
+                <VBox class="space-y-3"> 
+                    <Link text="Email Support" href="mailto:support@techconnect.com" icon="sap-icon://email" alignItems="Center" class="flex items-center text-sm text-primary-600 hover:text-primary-700"/>
+                    <Link text="Call Support" href="tel:+15551234567" icon="sap-icon://call" alignItems="Center" class="flex items-center text-sm text-primary-600 hover:text-primary-700"/>
+                </VBox>
+            </VBox>
+
+        </VBox>
+        
+    </VBox>
+    </VBox>
+
+</mvc:View>

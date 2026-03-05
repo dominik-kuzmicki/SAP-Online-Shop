@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){"use strict";return n.extend("sap.ui.demo.controller.App",{onInit:function(){var n=this.byId("mainBox");n.addEventDelegate({onclick:function(){this.onMain()}.bind(this)})},onMain:function(){this.getOwnerComponent().getRouter().navTo("Main")},onCart:function(){this.getOwnerComponent().getRouter().navTo("Cart")},onAccount:function(){this.getOwnerComponent().getRouter().navTo("Account",{tab:"Profile"})}})});
+//# sourceMappingURL=App.controller.js.map

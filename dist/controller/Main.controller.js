@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("sap.ui.demo.controller.Main",{onInit:function(){const e=this.getOwnerComponent().getModel("categories");this.getView().setModel(e)},onItemPress:function(e){var t=e.getSource();var n=t.getBindingContext();var o=n.getProperty("ID");this.getOwnerComponent().getRouter().navTo("Products",{id:o})}})});
+//# sourceMappingURL=Main.controller.js.map
